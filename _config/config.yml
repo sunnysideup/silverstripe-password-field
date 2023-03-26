@@ -1,0 +1,5 @@
+---
+Name: password-field
+After:
+  - '#coreconfig'
+---
