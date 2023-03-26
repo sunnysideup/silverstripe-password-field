@@ -12,13 +12,8 @@ if(passwordElement) {
     const eyeElement = passwordElement.querySelector('.eye');
     const inputElement = passwordElement.querySelector('input');
     const height = inputElement.offsetHeight;
-    console.log(inputElement.offsetHeight);
     eyeElement.style.top = 'calc( '+Math.round(height/2)  + 'px - 0.5em)' ;
-    // add a click event listener to the right element
     eyeElement.addEventListener('click', () => {
-            // find the input element
-
-
             // toggle between password and text
             if (inputElement.type === 'password') {
                 inputElement.type = 'text';
@@ -32,8 +27,6 @@ if(passwordElement) {
             }
         }
     );
-} else {
-    console.log('id not found');
 }
 </script>
 <style>
@@ -44,10 +37,10 @@ if(passwordElement) {
         position: absolute;
         right: 0.5em;
         cursor: pointer;
-
     }
     .eye-holder .eye.text-eye {
         opacity: 0.5;
-    }
+        text-decoration: line-through;
 
+    }
 </style>
